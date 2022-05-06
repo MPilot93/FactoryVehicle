@@ -2,11 +2,17 @@
 {
     public abstract class Vehicle : IVehicle
     {
-        public int Cilindrata;
+        public int PistonDisplace;
+        public int Weight;
 
-        public Vehicle(int cilindrata) => Cilindrata = cilindrata;
+        public Vehicle(int pistonDisplace, int weight)
+        {
+            PistonDisplace = pistonDisplace;
+            Weight = weight;
+        }
+        public int GetPower() => PistonDisplace;
 
-        public int GetPower() => Cilindrata;
+        public int GetWeight() => Weight;
 
     }
 }

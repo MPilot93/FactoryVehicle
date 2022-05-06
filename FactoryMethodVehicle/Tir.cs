@@ -2,7 +2,7 @@
 {
     public class Tir : Vehicle, IVehicle
     {
-        public Tir(int cilindrata) : base(cilindrata)
+        public Tir(int pistonDisplace, int weight) : base(pistonDisplace, weight)
         {
         }
     }

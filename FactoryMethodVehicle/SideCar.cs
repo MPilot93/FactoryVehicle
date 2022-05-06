@@ -2,7 +2,7 @@
 {
     public class SideCar : Vehicle, IVehicle
     {
-        public SideCar(int cilindrata) : base(cilindrata)
+        public SideCar(int pistonDisplace, int weight) : base(pistonDisplace, weight)
         {
         }
     }

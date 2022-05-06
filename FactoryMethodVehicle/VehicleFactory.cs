@@ -2,17 +2,15 @@
 {
     public class VehicleFactory
     {
-        public static IVehicle Build(int numberOfWheels, int cilindrata, bool carico) => numberOfWheels switch
+        public static IVehicle Build(int numberOfWheels, int pistonDisplace, int weight) => numberOfWheels switch
         {
-            2 => cilindrata > 125 ? new Motorbike(cilindrata) : new Scooter(cilindrata),
-            3 => new SideCar(cilindrata),
-            4 => new Car(cilindrata),
-            6 => carico==true ?  new Tir(cilindrata) : new Truck(cilindrata),
+            2 => pistonDisplace > 125 ? new Motorbike(pistonDisplace,weight) : new Scooter(pistonDisplace, weight),
+            3 => new SideCar(pistonDisplace, weight),
+            4 => new Car(pistonDisplace, weight),
+            6 => weight> 3500 ?  new Tir(pistonDisplace, weight) : new Truck(pistonDisplace, weight),
 
             _ => throw new NumberOfWheelsNotSupported()
         };
     }
 }
 
-//if (carico == true) new Tir(cilindrata);
-//else new Truck(cilindrata),

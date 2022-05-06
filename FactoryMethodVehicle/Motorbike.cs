@@ -2,7 +2,7 @@
 {
     public class Motorbike : Vehicle, IVehicle
     {
-        public Motorbike(int cilindrata) : base(cilindrata)
+        public Motorbike(int pistonDisplace, int weight) : base(pistonDisplace, weight)
         {
         }
     }
