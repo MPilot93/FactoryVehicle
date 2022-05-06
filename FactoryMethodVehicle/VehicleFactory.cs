@@ -2,7 +2,7 @@
 {
     public class VehicleFactory
     {
-        public static IVehicle Build(int numberOfWheels, int pistonDisplace, int weight) => numberOfWheels switch
+        public static Vehicle Build(int numberOfWheels, int pistonDisplace, int weight) => numberOfWheels switch
         {
             2 => pistonDisplace > 125 ? new Motorbike(pistonDisplace,weight) : new Scooter(pistonDisplace, weight),
             3 => new SideCar(pistonDisplace, weight),
